@@ -86,7 +86,7 @@ public class Replacer implements Listener {
             if(l.getBlock().getType() != to) continue;
             boolean change = true;
             for(Entity entity : getNearbyEntities(l, radius+1)){
-                if(entity.getType() == EntityType.PLAYER && ignorePlayers){
+                if(entity.getType() == EntityType.PLAYER && !ignorePlayers){
                     change = false;
                 }
             }
