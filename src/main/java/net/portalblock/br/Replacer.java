@@ -67,26 +67,26 @@ public class Replacer implements Listener {
 
     public void onDisable(){
         done = true;
-        reset();
+        reset(false);
     }
 
     public Runnable getReseter(){
         return new Runnable() {
             @Override
             public void run() {
-                reset();
+                reset(true);
             }
         };
     }
 
-    private void reset(){
+    private void reset(boolean ignorePlayers){
         Iterator<Location> it = locations.iterator();
         while(it.hasNext()){
             Location l = it.next();
             if(l.getBlock().getType() != to) continue;
             boolean change = true;
             for(Entity entity : getNearbyEntities(l, radius+1)){
-                if(entity.getType() == EntityType.PLAYER){
+                if(entity.getType() == EntityType.PLAYER && ignorePlayers){
                     change = false;
                 }
             }
