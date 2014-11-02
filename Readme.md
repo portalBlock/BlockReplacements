@@ -8,6 +8,6 @@ Simply edit the existing list with \<from>:\<to>:\<radius> to change the behavio
 is the value to change it to, and "radius" is the radius you want the blocks to change in.
 Disclaimer
 ==========
-This plugin will not change blocks back on server crash or shutdown if there are players within the radius of a changed blocks.  
+This plugin will not change blocks back on server crash/unsafe shutdowns(shutdowns that do not call the plugin's onDisable method.).  
 **I AM NOT RESPONSIBLE FOR ANY DAMAGES TO YOUR SERVER OR MAP/WORLD!**  
 **PLEASE MAKE REGULAR BACKUPS BECAUSE THAT IS ALWAYS GOOD :D**
