@@ -1,0 +1,4 @@
+name: BlockReplacements
+version: 1.0
+main: net.portalblock.br.BlockReplacements
+author: portalBlock
